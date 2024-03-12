@@ -75,6 +75,12 @@
   }
 }
 
+/* body {
+  background-image: url(../public/bg.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+} */
 .swiper {
   width: 100%;
   height: 100vh;
@@ -86,6 +92,29 @@
   color: #fff;
   box-sizing: border-box;
   padding: 40px 60px;
+}
+
+.swiper-pagination {
+  background-color: #191919 !important;
+  height: 50% !important;
+  display: flex !important; /* Use flexbox to center children */
+  align-items: center !important; /* This centers children vertically */
+  justify-content: center !important; /* This centers children horizontally, if needed */
+  flex-direction: column !important; /* Arranges children in a column */
+  right: -1px !important;
+  padding: 20px;
+  border-radius: 5px;
+}
+.swiper-pagination-bullet {
+  background-color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+
+  /* padding: 1px !important; */
+  border-radius: 100px !important;
+  /* padding-left: 5px !important; */
+  /* width: 30px !important; */
+  /* height: 1px !important; */
+  /* padding-right: 5px !important; */
 }
 
 .parallax-bg {

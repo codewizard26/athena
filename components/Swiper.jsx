@@ -8,9 +8,9 @@ import TestimonialsSection from "./TestimonialsSection";
 import NewsletterSection from "./NewsletterSection";
 import AboutSection from "./AboutSection";
 
-// import "swiper/css";
-// import "swiper/css/pagination";
-// import "swiper/css/navigation";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const SwiperComponent = () => {
   return (
@@ -22,37 +22,44 @@ const SwiperComponent = () => {
       }}
       speed={600}
       mousewheel={true}
-      parallax={true}
+      // parallax={true}
       pagination={{
         clickable: true,
       }}
       // navigation={true}
       modules={[Parallax, Pagination, Navigation, Mousewheel]}
-      className="mySwiper h-screen w-screen "
+      // className="mySwiper h-screen w-screen "
     >
       <div
-        slot="container-start"
+        // slot="container-start"
         className="parallax-bg "
         // style={{
         //   backgroundImage:
         //     "url(https://swiperjs.com/demos/images/nature-1.jpg)",
         // }}
-        data-swiper-parallax="-23%"
+        // data-swiper-parallax="-23%"
       ></div>
       <SwiperSlide
-        style={{
-          background: `url(moorti.svg)  center center / cover no-repeat`,
-          backgroundSize: "contain",
-        }}
+        // style={{
+        //   background: `url(moorti.svg)  center center / cover no-repeat`,
+        //   backgroundSize: "contain",
+        // }}
+        className=""
       >
-        <div className="content h-screen items-center">
-          <div className=" text-[96px] font-[550]">
-            <div className="gradient-text">Where Ideas</div>
-            <div className="gradient-text">Become Reality</div>
+        <div className="grid grid-cols-2">
+          <div className="h-full w-full sm:space-y-6 flex flex-col justify-center">
+            <div className=" text-[96px] font-[550]">
+              <div className="gradient-text">Where Ideas</div>
+              <div className="gradient-text">Become Reality</div>
+            </div>
+
+            <div className="flex justify-start">
+              <Button>Free Consultation</Button>
+            </div>
           </div>
-          <div className="subtitle">{/* Subtitle */}</div>
-          <div className="text"></div>
-          <Button>Free Consultation</Button>
+          <div className="">
+            <img src="moorti.svg" alt="moorti" />
+          </div>
         </div>
       </SwiperSlide>
 

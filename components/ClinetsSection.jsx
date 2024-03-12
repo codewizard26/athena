@@ -1,19 +1,25 @@
 export default function ClientsSection() {
   const clients = [
     { name: "ATOM Accelerator", logo: "/path-to-logo/atom.png" },
-    { name: "Seraphim Labs", logo: "/path-to-logo/seraphim.png" },
-    { name: "Eulimet", logo: "/path-to-logo/eulimet.png" },
-    { name: "Virtuoso", logo: "/path-to-logo/virtuoso.png" },
-    { name: "Mint", logo: "/path-to-logo/mint.png" },
-    { name: "Cerebro", logo: "/path-to-logo/cerebro.png" },
+    { name: "DIFINITY", logo: "/path-to-logo/seraphim.png" },
+    { name: "Seraphim Labs", logo: "/path-to-logo/eulimet.png" },
+    { name: "Lunarspace", logo: "/path-to-logo/virtuoso.png" },
+    { name: "Eumlet", logo: "/path-to-logo/mint.png" },
+    { name: "Concordium", logo: "/path-to-logo/cerebro.png" },
+    { name: "Gains Associates", logo: "/path-to-logo/cerebro.png" },
+    { name: "Shade Protocol", logo: "/path-to-logo/cerebro.png" },
+    { name: "SwitcheoLabs", logo: "/path-to-logo/cerebro.png" },
+    { name: "BG Trade", logo: "/path-to-logo/cerebro.png" },
   ];
 
   return (
-    <div className="bg-black text-white py-12">
-      <div className="text-center text-4xl mb-8">Meet some of our clients.</div>
+    <div className="bg-black text-white py-12 sm:space-y-16">
+      <div className="text-center gradient-text text-[96px] font-[550] mb-8">
+        Meet some of our clients.
+      </div>
       <div className="flex justify-center items-center flex-wrap gap-8">
         {clients.map((client, index) => (
-          <div key={index} className="flex flex-col items-center">
+          <div key={index} className="flex flex-col  items-center  basis-1/6">
             <div className="w-24 h-24 bg-white rounded-full mb-4">
               {/* If you have logo images, use <img> instead of <div> */}
               {/* <img src={client.logo} alt={client.name} className="w-24 h-24 rounded-full mb-4" /> */}
