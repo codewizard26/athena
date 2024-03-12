@@ -1,7 +1,13 @@
 "use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Parallax, Pagination, Navigation, Mousewheel } from "swiper/modules";
+import {
+  Parallax,
+  Pagination,
+  Keyboard,
+  Navigation,
+  Mousewheel,
+} from "swiper/modules";
 import { Button } from "./ui/button";
 import ClientsSection from "./ClinetsSection";
 import TestimonialsSection from "./TestimonialsSection";
@@ -26,8 +32,9 @@ const SwiperComponent = () => {
       pagination={{
         clickable: true,
       }}
+      keyboard={true}
       // navigation={true}
-      modules={[Parallax, Pagination, Navigation, Mousewheel]}
+      modules={[Parallax, Keyboard, Pagination, Navigation, Mousewheel]}
       // className="mySwiper h-screen w-screen "
     >
       <div
