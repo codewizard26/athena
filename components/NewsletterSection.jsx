@@ -1,3 +1,5 @@
+import { Button } from "./ui/button";
+
 export default function NewsletterSection() {
   return (
     <div className="bg-black text-white flex flex-wrap md:flex-nowrap py-12 px-6 md:px-12">
@@ -15,9 +17,7 @@ export default function NewsletterSection() {
         <p className="mb-8">
           Keep up with us and our interesting bits via our newsletter.
         </p>
-        <button className="bg-gray-800 text-white px-6 py-2 rounded">
-          Join Newsletter
-        </button>
+        <Button className="">Join Newsletter</Button>
       </div>
       <div className="flex-1 hidden md:block">
         <img

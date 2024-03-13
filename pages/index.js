@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import SwiperComponent from "@/components/Swiper";
+import OverlayNav from "@/components/Navbar";
+import { Button } from "@/components/ui/button";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,7 +12,9 @@ export default function Home() {
       className=""
       // className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
     >
-      <div className="justify-center flex my-12">
+      <div className="justify-between flex my-12">
+        <OverlayNav />
+
         <svg
           width="258"
           height="39"
@@ -23,6 +27,7 @@ export default function Home() {
             fill="white"
           />
         </svg>
+        <Button className="bg-transparent">Contact us</Button>
       </div>
       <div className="m-16 ">
         {" "}

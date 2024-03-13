@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body className="bg-black bg-opacity-80 bg-[url('/bg.png')] h-screen w-screen bg-cover bg-no-repeat bg-center">
+      <body className="bg-black bg-opacity-80 h-screen w-screen bg-cover bg-no-repeat bg-center custom-bg">
         <Main />
         <NextScript />
       </body>
