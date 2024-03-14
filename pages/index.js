@@ -9,10 +9,10 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <main
-      className=""
+      className="container"
       // className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
     >
-      <div className="justify-between flex my-12">
+      <div className="justify-between flex mb-6 mt-12">
         <OverlayNav />
 
         <svg
@@ -29,8 +29,19 @@ export default function Home() {
         </svg>
         <Button className="bg-transparent">Contact us</Button>
       </div>
-      <div className="m-16 ">
-        {" "}
+      <div
+        className="flex justify-center  -mb-48 "
+        style={{
+          zIndex: 1,
+          position: "relative",
+        }}
+      >
+        <div className="border-black border-[32px] rounded-full   ">
+          <img src="/moon.png" className="w-52" />
+        </div>
+      </div>
+
+      <div className="  " style={{ zIndex: 0, position: "relative" }}>
         <SwiperComponent />
       </div>
     </main>

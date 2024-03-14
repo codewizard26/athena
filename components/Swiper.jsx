@@ -31,6 +31,7 @@ const SwiperComponent = () => {
       }}
       speed={600}
       mousewheel={true}
+      className=""
       // parallax={true}
       pagination={{
         clickable: true,
@@ -58,7 +59,7 @@ const SwiperComponent = () => {
       >
         <div className="grid grid-cols-2">
           <div className="h-full w-full sm:space-y-6 flex flex-col justify-center">
-            <div className=" md:text-7xl font-[550]">
+            <div className="text-5xl md:text-6xl lg:text-6xl xl:text-7xl  font-[550]">
               <div className="gradient-text">Where Ideas</div>
               <div className="gradient-text">Become Reality</div>
             </div>
@@ -67,8 +68,8 @@ const SwiperComponent = () => {
               <Button>Free Consultation</Button>
             </div>
           </div>
-          <div className="">
-            <img src="moorti.svg" alt="moorti" />
+          <div className="flex justify-center items-center w-full">
+            <img src="moorti.svg" alt="moorti" className="max-w-[50%] h-auto" />
           </div>
         </div>
       </SwiperSlide>
@@ -86,13 +87,13 @@ const SwiperComponent = () => {
         <NewsletterSection />
       </SwiperSlide>
       <SwiperSlide>
-        <FounderStatement/>
+        <FounderStatement />
       </SwiperSlide>
       <SwiperSlide>
-        <Collaborate/>
+        <Collaborate />
       </SwiperSlide>
       <SwiperSlide>
-        <Footer/>
+        <Footer />
       </SwiperSlide>
     </Swiper>
   );
