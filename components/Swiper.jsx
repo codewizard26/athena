@@ -17,6 +17,8 @@ import AboutSection from "./AboutSection";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import FounderStatement from "./FounderStatement";
+import Collaborate from "./Collaborate";
 
 const SwiperComponent = () => {
   return (
@@ -55,7 +57,7 @@ const SwiperComponent = () => {
       >
         <div className="grid grid-cols-2">
           <div className="h-full w-full sm:space-y-6 flex flex-col justify-center">
-            <div className=" text-[96px] font-[550]">
+            <div className=" md:text-7xl font-[550]">
               <div className="gradient-text">Where Ideas</div>
               <div className="gradient-text">Become Reality</div>
             </div>
@@ -82,9 +84,13 @@ const SwiperComponent = () => {
       <SwiperSlide>
         <NewsletterSection />
       </SwiperSlide>
-      {/* <SwiperSlide></SwiperSlide>
-      <SwiperSlide></SwiperSlide>
-      <SwiperSlide></SwiperSlide> */}
+      <SwiperSlide>
+        <FounderStatement/>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Collaborate/>
+      </SwiperSlide>
+      {/* <SwiperSlide></SwiperSlide> */}
     </Swiper>
   );
 };
