@@ -1,14 +1,15 @@
 import React from 'react'
 import { Input } from './ui/input'
+import { Button } from './ui/button'
 
 function Collaborate() {
   return (
     <div>
-        <div classNam= "flex " >
-        <div className='flex text-7xl gradient-text font-[550] mt-12 flex-row justify-center'>
+        <div classNam= "flex mt-16 " >
+        <div className='flex text-7xl gradient-text font-[550] mt-24 flex-row justify-center'>
             Interested in collaborating ?
         </div>
-        <div className='flex text-xl heading-sub mt-4 flex-row justify-center'>
+        <div className='flex text-xl heading-sub mt-8 flex-row justify-center'>
             Athena’s always looking for a way to make your life easier.
         </div>
         <div className='flex text-md heading-sub mt-4 flex-row justify-center'>
@@ -20,6 +21,8 @@ function Collaborate() {
                 <Input type="text" placeholder="Name" />
                 <Input type="email" placeholder="Email" />
                 <Input type="text" placeholder = "Tell us about it" />
+                <Button className="mt-12 w-96">Send Message</Button>
+
                 </div>
             </div>
             <div className='flex-1'>

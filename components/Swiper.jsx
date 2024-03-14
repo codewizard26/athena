@@ -19,6 +19,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import FounderStatement from "./FounderStatement";
 import Collaborate from "./Collaborate";
+import Footer from "./Footer";
 
 const SwiperComponent = () => {
   return (
@@ -90,7 +91,9 @@ const SwiperComponent = () => {
       <SwiperSlide>
         <Collaborate/>
       </SwiperSlide>
-      {/* <SwiperSlide></SwiperSlide> */}
+      <SwiperSlide>
+        <Footer/>
+      </SwiperSlide>
     </Swiper>
   );
 };
