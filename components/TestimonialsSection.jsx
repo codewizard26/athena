@@ -8,7 +8,7 @@ export default function TestimonialsSection() {
 
   return (
     <div className="bg-black text-white ">
-      <div className="text-center gradient-text mb-10 text-7xl font-[550] ">
+      <div className="text-center gradient-text mb-10 mt-16 text-7xl font-[550] ">
         Hear from our clients.
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-8">

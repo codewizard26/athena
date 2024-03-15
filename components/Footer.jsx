@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
   return (
     <div>
-        <div className='flex flex-col'>
+        <div className='flex flex-col mt-16'>
             <div className='text-gray-500'>
             &copy;2024 Athena. All Rights Reserved.
             </div>

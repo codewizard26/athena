@@ -29,7 +29,7 @@ export default function Home() {
         </svg>
         <Button className="bg-transparent">Contact us</Button>
       </div>
-      <div
+      {/* <div
         className="flex justify-center  -mb-48 "
         style={{
           zIndex: 1,
@@ -39,7 +39,7 @@ export default function Home() {
         <div className="border-black border-[32px] rounded-full   ">
           <img src="/moon.png" className="w-52" />
         </div>
-      </div>
+      </div> */}
 
       <div className="  " style={{ zIndex: 0, position: "relative" }}>
         <SwiperComponent />

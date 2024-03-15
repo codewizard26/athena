@@ -5,9 +5,11 @@ export default function FounderStatement() {
   return (
     <div className="bg-black text-white flex flex-wrap md:flex-nowrap mb-8 py-12 px-6 md:px-12">
         <div className="flex-1 hidden md:block">
-        <img
+        <Image
           src="window.svg"
           alt="window"
+          height="400"
+          width="400"
           //   className="w-full h-full object-cover"
         />
       </div>

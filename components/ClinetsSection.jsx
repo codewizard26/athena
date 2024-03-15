@@ -13,8 +13,8 @@ export default function ClientsSection() {
   ];
 
   return (
-    <div className="bg-black text-white py-12 sm:space-y-16">
-      <div className="text-center gradient-text text-7xl font-[550] mb-8">
+    <div className="bg-black  mb-10 text-white py-1 sm:space-y-16">
+      <div className=" text-center gradient-text text-7xl font-[550] mb-8">
         Meet some of our clients.
       </div>
       <div className="flex justify-center items-center flex-wrap gap-8">
