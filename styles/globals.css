@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&display=swap");
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -115,7 +117,7 @@ body {
   flex-direction: column !important; /* Arranges children in a column */
   right: -1px !important;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 5px 0px 0px 5px;
 }
 .swiper-pagination-bullet {
   background-color: #ffffff !important;
