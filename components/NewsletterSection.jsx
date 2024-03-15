@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "./ui/button";
 
 export default function NewsletterSection() {
@@ -18,9 +19,11 @@ export default function NewsletterSection() {
         <Button className="">Join Newsletter</Button>
       </div>
       <div className="flex-1 hidden md:block">
-        <img
+        <Image
           src="window.svg"
           alt="window"
+          height="400"
+          width="400"
           //   className="w-full h-full object-cover"
         />
       </div>

@@ -12,7 +12,7 @@ export default function Home() {
       className=""
       // className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
     >
-      <div className="justify-between flex my-12">
+      <div className="justify-between flex my-10 container">
         <OverlayNav />
 
         <svg
@@ -29,7 +29,7 @@ export default function Home() {
         </svg>
         <Button className="bg-transparent">Contact us</Button>
       </div>
-      <div className="m-16 ">
+      <div className=" container ">
         {" "}
         <SwiperComponent />
       </div>

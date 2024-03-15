@@ -1,11 +1,24 @@
+import Image from "next/image";
 import React from "react";
 
 function AboutSection() {
   return (
-    <div className="grid grid-cols-2   items-center h-full w-full">
-      <div>
-        <img src="moorti.svg" />
-      </div>
+    <div>
+      {/* <div className=" mt-16 mb-16 container moon-container">
+    <div className="moon-section flex flex-row justify-center">
+        <Image className="moon-image" width="120" height="120" src="moon.svg" alt="moon"/>
+    </div>
+</div> */}
+    <div className="grid grid-cols-2  items-center h-full w-full">
+      <div className="moorti-container">
+  <Image
+    className="moorti-2"
+    width="500"
+    height="500"
+    alt="moorti"
+    src="moorti.svg"
+  />
+</div>
       <div className="space-y-6">
         <div className="gradient-text text-[50px] font-[550]">About Athena</div>
         <div className="text-[20px] font-[400]">
@@ -80,6 +93,7 @@ function AboutSection() {
           </svg>
         </div>
       </div>
+    </div>
     </div>
   );
 }

@@ -202,3 +202,54 @@ body {
   line-height: 1;
   color: transparent;
 }
+
+.moon-container {
+  position: relative;
+  width: 100%;
+  height: 90px; /* Adjust this height as needed */
+  overflow: visible;
+}
+
+.moon-section {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 90px; /* Adjust this height as needed */
+  z-index: 1;
+}
+
+.moon-image {
+  position: absolute;
+  /* Half of the moon image height */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px; /* Adjust width as needed */
+  height: 180px; /* Adjust height as needed */
+  z-index: -1;
+}
+
+.moorti-1 {
+  margin-top: -8rem;
+  margin-left: -4rem;
+  z-index: 100;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.moorti-2 {
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 3s ease forwards;
+}
