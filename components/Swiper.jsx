@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Parallax,
@@ -19,10 +19,21 @@ import Collaborate from "./Collaborate";
 import Footer from "./Footer";
 import Home from "./Home";
 
-const SwiperComponent = () => {
+const SwiperComponent = ({ activeSlide }) => {
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideTo(activeSlide);
+    }
+  }, [activeSlide]);
+
   return (
     <Swiper
+      ref={swiperRef}
       direction="vertical"
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log("slide change")}
       style={{
         "--swiper-navigation-color": "#fff",
         "--swiper-pagination-color": "#fff",

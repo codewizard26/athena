@@ -5,17 +5,6 @@ import { Button } from "./ui/button";
 function Home() {
   return (
     <div>
-      <div className="moon-container absolute top-0 left-1/2 transform -translate-x-1/2">
-        <div className="moon-section flex flex-row justify-center">
-          <Image
-            className="moon-image"
-            width="180"
-            height="180"
-            src="moon.svg"
-            alt="moon"
-          />
-        </div>
-      </div>
       <div className="grid grid-cols-2">
         <div className="h-full w-full sm:space-y-6 flex flex-col justify-center">
           <div className="text-xl md:text-4xl lg:text-6xl xl:text-7xl  font-[550]">

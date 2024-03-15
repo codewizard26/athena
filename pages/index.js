@@ -1,4 +1,5 @@
 import Image from "next/image";
+import React from "react";
 import { Inter } from "next/font/google";
 import SwiperComponent from "@/components/Swiper";
 import OverlayNav from "@/components/Navbar";
@@ -7,13 +8,15 @@ import { Button } from "@/components/ui/button";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [activeSlide, setActiveSlide] = React.useState(0);
+
   return (
     <main
       className="container"
       // className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
     >
       <div className="justify-between flex mb-6 mt-12">
-        <OverlayNav />
+        <OverlayNav setActiveSlide={setActiveSlide} />
 
         <svg
           width="258"
@@ -29,8 +32,8 @@ export default function Home() {
         </svg>
         <Button className="bg-transparent">Contact us</Button>
       </div>
-      {/* <div
-        className="flex justify-center  -mb-48 "
+      <div
+        className="flex justify-center  -mb-28 "
         style={{
           zIndex: 1,
           position: "relative",
@@ -39,10 +42,10 @@ export default function Home() {
         <div className="border-black border-[32px] rounded-full   ">
           <img src="/moon.png" className="w-52" />
         </div>
-      </div> */}
+      </div>
 
       <div className="  " style={{ zIndex: 0, position: "relative" }}>
-        <SwiperComponent />
+        <SwiperComponent activeSlide={activeSlide} />
       </div>
     </main>
   );
