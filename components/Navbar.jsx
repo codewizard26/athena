@@ -5,6 +5,7 @@ const OverlayNav = ({ setActiveSlide }) => {
 
   const openNav = () => setIsOpen(true);
   const closeNav = () => setIsOpen(false);
+
   const nav_fields = [
     { name: "Home", link: "#", slideIndex: 0 },
     { name: "About", link: "#", slideIndex: 1 },
@@ -14,16 +15,17 @@ const OverlayNav = ({ setActiveSlide }) => {
     { name: "Statement", link: "#", slideIndex: 5 },
     { name: "Contact", link: "#", slideIndex: 6 },
   ];
+
   return (
     <div>
       <div
-        className={`fixed inset-0 bg-black bg-opacity-80 z-50 transition-opacity duration-500 ${
-          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        className={`fixed inset-0 bg-black bg-opacity-80 z-50 transition-all duration-500 transform ${
+          isOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full"
         }`}
       >
         <button
           onClick={closeNav}
-          className="absolute top-5 left-10 text-4xl text-white"
+          className="absolute top-5 left-10 text-4xl text-white transform transition-transform hover:scale-110"
         >
           &times;
         </button>
@@ -32,8 +34,9 @@ const OverlayNav = ({ setActiveSlide }) => {
             <a
               key={index}
               href={field.link}
-              className="text-4xl text-white hover-underline-animation"
-              onClick={() => {
+              className="text-4xl text-white  hover-underline-animation"
+              onClick={(e) => {
+                e.preventDefault();
                 setActiveSlide(field.slideIndex);
                 closeNav();
               }}
@@ -46,7 +49,9 @@ const OverlayNav = ({ setActiveSlide }) => {
 
       <div
         onClick={openNav}
-        className="flex items-center text-white bg-transparent"
+        className={`flex items-center text-white bg-transparent cursor-pointer ${
+          isOpen ? "hidden" : ""
+        }`}
       >
         <svg
           width="31"
@@ -54,12 +59,13 @@ const OverlayNav = ({ setActiveSlide }) => {
           viewBox="0 0 31 14"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className="transform transition-transform hover:scale-110"
         >
           <path d="M0.893555 0.68457H30.067" stroke="white" />
           <path d="M0.893555 6.8916H20.4445" stroke="white" />
           <path d="M0.893555 13.0601H30.067" stroke="white" />
         </svg>
-        <div className="mx-2"> MENU</div>
+        <div className="mx-2">MENU</div>
       </div>
     </div>
   );

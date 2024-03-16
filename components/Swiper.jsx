@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Parallax,
@@ -21,19 +21,19 @@ import Home from "./Home";
 
 const SwiperComponent = ({ activeSlide }) => {
   const swiperRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideTo(activeSlide);
     }
   }, [activeSlide]);
-
   return (
     <Swiper
       ref={swiperRef}
       direction="vertical"
       onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
+      onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
       style={{
         "--swiper-navigation-color": "#fff",
         "--swiper-pagination-color": "#fff",
@@ -48,25 +48,25 @@ const SwiperComponent = ({ activeSlide }) => {
     >
       <div className="parallax-bg">
         <SwiperSlide className="z-1">
-          <Home />
+          <Home isActive={activeIndex === 0} />
         </SwiperSlide>
         <SwiperSlide>
-          <AboutSection />
+          <AboutSection isActive={activeIndex === 1} />
         </SwiperSlide>
         <SwiperSlide>
-          <ClientsSection />
+          <ClientsSection isActive={activeIndex === 2} />
         </SwiperSlide>
         <SwiperSlide>
-          <TestimonialsSection />
+          <TestimonialsSection isActive={activeIndex === 3} />
         </SwiperSlide>
         <SwiperSlide>
-          <NewsletterSection />
+          <NewsletterSection isActive={activeIndex === 4} />
         </SwiperSlide>
         <SwiperSlide>
-          <FounderStatement />
+          <FounderStatement isActive={activeIndex === 5} />
         </SwiperSlide>
         <SwiperSlide>
-          <Collaborate />
+          <Collaborate isActive={activeIndex === 6} />
         </SwiperSlide>
         <SwiperSlide>
           <Footer />
