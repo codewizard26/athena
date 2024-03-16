@@ -1,25 +1,28 @@
 import Image from "next/image";
+import React from "react";
 import { Inter } from "next/font/google";
 import SwiperComponent from "@/components/Swiper";
 import OverlayNav from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
+import MobileViewIndex from "@/components/MobileViewIndex";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [activeSlide, setActiveSlide] = React.useState(0);
+
   return (
     <main
-      className=""
+      className="container"
       // className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
     >
-      <div className="justify-between flex my-10 container">
-        <OverlayNav />
+      <div className="justify-between items-center flex mb-6 mt-12">
+        <OverlayNav setActiveSlide={setActiveSlide} />
 
         <svg
-          width="258"
-          height="39"
           viewBox="0 0 258 39"
           fill="none"
+          className="athena-logo w-20 h-20 sm:w-40 md:w-60 sm:h-14"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -27,12 +30,27 @@ export default function Home() {
             fill="white"
           />
         </svg>
-        <Button className="bg-transparent">Contact us</Button>
+        <Button className="bg-transparent hidden sm:block">Contact us</Button>
       </div>
-      <div className=" container ">
-        {" "}
-        <SwiperComponent />
+      {/* <div
+        className="sm:flex hidden justify-center  -mb-28 "
+        style={{
+          zIndex: 1,
+          position: "relative",
+        }}
+      >
+        <div className="border-black border-[16px] rounded-full   ">
+          <img src="/moon.png" className="w-24" />
+        </div>
+      </div> */}
+
+      <div
+        className=" sm:block hidden "
+        style={{ zIndex: 0, position: "relative" }}
+      >
+        <SwiperComponent activeSlide={activeSlide} />
       </div>
+      <MobileViewIndex />
     </main>
   );
 }

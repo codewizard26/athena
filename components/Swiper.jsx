@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Parallax,
@@ -19,10 +19,21 @@ import Collaborate from "./Collaborate";
 import Footer from "./Footer";
 import Home from "./Home";
 
-const SwiperComponent = () => {
+const SwiperComponent = ({ activeSlide }) => {
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideTo(activeSlide);
+    }
+  }, [activeSlide]);
+
   return (
     <Swiper
+      ref={swiperRef}
       direction="vertical"
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log("slide change")}
       style={{
         "--swiper-navigation-color": "#fff",
         "--swiper-pagination-color": "#fff",
@@ -36,30 +47,30 @@ const SwiperComponent = () => {
       modules={[Parallax, Keyboard, Pagination, Navigation, Mousewheel]}
     >
       <div className="parallax-bg">
-      <SwiperSlide className="z-1" >
-        <Home/>
-      </SwiperSlide>
-      <SwiperSlide>
-        <AboutSection />
-      </SwiperSlide>
-      <SwiperSlide>
-        <ClientsSection />
-      </SwiperSlide>
-      <SwiperSlide>
-        <TestimonialsSection />
-      </SwiperSlide>
-      <SwiperSlide>
-        <NewsletterSection />
-      </SwiperSlide>
-      <SwiperSlide>
-        <FounderStatement />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Collaborate />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Footer />
-      </SwiperSlide>
+        <SwiperSlide className="z-1">
+          <Home />
+        </SwiperSlide>
+        <SwiperSlide>
+          <AboutSection />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ClientsSection />
+        </SwiperSlide>
+        <SwiperSlide>
+          <TestimonialsSection />
+        </SwiperSlide>
+        <SwiperSlide>
+          <NewsletterSection />
+        </SwiperSlide>
+        <SwiperSlide>
+          <FounderStatement />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Collaborate />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Footer />
+        </SwiperSlide>
       </div>
     </Swiper>
   );

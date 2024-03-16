@@ -1,18 +1,18 @@
 import { useState } from "react";
 
-const OverlayNav = () => {
+const OverlayNav = ({ setActiveSlide }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const openNav = () => setIsOpen(true);
   const closeNav = () => setIsOpen(false);
   const nav_fields = [
-    { name: "Home", link: "#" },
-    { name: "About", link: "#" },
-    { name: "Clients", link: "#" },
-    { name: "Testimonials", link: "#" },
-    { name: "Newsletter", link: "#" },
-    { name: "Statement", link: "#" },
-    { name: "Contact", link: "#" },
+    { name: "Home", link: "#", slideIndex: 0 },
+    { name: "About", link: "#", slideIndex: 1 },
+    { name: "Clients", link: "#", slideIndex: 2 },
+    { name: "Testimonials", link: "#", slideIndex: 3 },
+    { name: "Newsletter", link: "#", slideIndex: 4 },
+    { name: "Statement", link: "#", slideIndex: 5 },
+    { name: "Contact", link: "#", slideIndex: 6 },
   ];
   return (
     <div>
@@ -33,7 +33,10 @@ const OverlayNav = () => {
               key={index}
               href={field.link}
               className="text-4xl text-white hover-underline-animation"
-              onClick={closeNav}
+              onClick={() => {
+                setActiveSlide(field.slideIndex);
+                closeNav();
+              }}
             >
               {field.name}
             </a>
