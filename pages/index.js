@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import SwiperComponent from "@/components/Swiper";
 import OverlayNav from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
+import MobileViewIndex from "@/components/MobileViewIndex";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +16,7 @@ export default function Home() {
       className="container"
       // className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
     >
-      <div className="justify-between flex mb-6 mt-12">
+      <div className="justify-between items-center flex mb-6 mt-12">
         <OverlayNav setActiveSlide={setActiveSlide} />
 
         <svg
@@ -32,21 +33,25 @@ export default function Home() {
         </svg>
         <Button className="bg-transparent">Contact us</Button>
       </div>
-      <div
-        className="flex justify-center  -mb-28 "
+      {/* <div
+        className="sm:flex hidden justify-center  -mb-28 "
         style={{
           zIndex: 1,
           position: "relative",
         }}
       >
-        <div className="border-black border-[32px] rounded-full   ">
-          <img src="/moon.png" className="w-52" />
+        <div className="border-black border-[16px] rounded-full   ">
+          <img src="/moon.png" className="w-24" />
         </div>
-      </div>
+      </div> */}
 
-      <div className="  " style={{ zIndex: 0, position: "relative" }}>
+      <div
+        className=" sm:block hidden "
+        style={{ zIndex: 0, position: "relative" }}
+      >
         <SwiperComponent activeSlide={activeSlide} />
       </div>
+      <MobileViewIndex />
     </main>
   );
 }

@@ -3,8 +3,8 @@ import { Button } from "./ui/button";
 
 export default function FounderStatement() {
   return (
-    <div className="bg-black text-white flex flex-wrap md:flex-nowrap mb-8 py-12 px-6 md:px-12">
-        <div className="flex-1 hidden md:block">
+    <div className=" text-white flex flex-wrap md:flex-nowrap md:mb-8 md:py-12  md:px-12">
+      <div className="flex-1 hidden md:block">
         <Image
           src="window.svg"
           alt="window"
@@ -22,18 +22,15 @@ export default function FounderStatement() {
           Hear from Athena’s Founder and CEO
         </div>
         <div className="mb-8">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-laboris nisi ut aliquip ex ea commodo consequat. 
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-non proident, sunt in culpa qui officia deserunt mollit 
-anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
         </div>
       </div>
-      
     </div>
   );
 }

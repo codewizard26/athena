@@ -13,7 +13,7 @@ export default function ClientsSection() {
   ];
 
   return (
-    <div className="bg-black  mb-10 text-white py-1 sm:space-y-16">
+    <div className="text-white  mb-10 py-1 sm:space-y-16">
       <div className=" text-center gradient-text text-7xl font-[550] mb-8">
         Meet some of our clients.
       </div>

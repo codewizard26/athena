@@ -85,9 +85,10 @@
 } */
 
 .custom-bg {
-  background-image: url("/bg1.png"), url("/bg2.png");
-  background-position: left, right;
-  background-size: 50% 100%, 50% 100%;
+  background-image: url("/bg2.png");
+  /* background-image: url("/bg1.png"), url("/bg2.png"); */
+  /* background-position: left, right; */
+  /* background-size: 50% 100%, 50% 100%; */
   /* border: 5px solid #191919; */
   background-repeat: no-repeat;
 }
@@ -95,6 +96,23 @@ body {
   height: 100%;
   overflow-y: hidden;
 }
+/* media query for mobile screens */
+@media (max-width: 768px) {
+  .custom-bg {
+    background-image: url("/bg2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-color: #000; */
+    /* background-opacity: 0.5; */
+  }
+
+  body {
+    height: 100%;
+    overflow-y: scroll;
+  }
+}
+
 .swiper {
   width: 100%;
   height: 75vh !important;
