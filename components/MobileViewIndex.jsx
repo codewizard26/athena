@@ -10,7 +10,7 @@ import Footer from "./Footer";
 
 function MobileViewIndex() {
   return (
-    <div className="sm:hidden block ">
+    <div className="sm:hidden block space-y-12 ">
       <Home />
       <AboutSection />
       <ClientsSection />

@@ -4,8 +4,8 @@ import React from "react";
 function AboutSection() {
   return (
     <div>
-      <div className=" mt-16 mb-16 container moon-container">
-        <div className="moon-section  flex flex-row justify-center">
+      {/* <div className=" mt-16 mb-16 container moon-container">
+        <div className="moon-section sm:block hidden   flex-row justify-center">
           <Image
             className="moon-image"
             width="120"
@@ -14,9 +14,9 @@ function AboutSection() {
             alt="moon"
           />
         </div>
-      </div>
+      </div> */}
       <div className="grid sm:grid-cols-2 bg-black rounded-md  items-center h-full w-full">
-        <div className="moorti-container">
+        <div className="moorti-container sm:order-first order-last">
           <Image
             className="moorti-2"
             width="500"
@@ -25,23 +25,23 @@ function AboutSection() {
             src="moorti.svg"
           />
         </div>
-        <div className="space-y-6 text-white p-2">
+        <div className="space-y-6 text-center sm:text-left text-white p-2 sm:order-last order-first">
           <div className="gradient-text text-[50px] font-[550]">
             About Athena
           </div>
-          <div className="text-[20px] font-[400]">
+          <div className="text-base sm:text-[20px] font-[400]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
             quibusdam, placeat nulla in accusantium voluptate aperiam! Eveniet
             nobis, debitis minima ipsa, magnam dolores hic inventore dolorum
             iste necessitatibus, rerum magni.
           </div>
-          <div className="text-[20px] font-[400]">
+          <div className="text-base sm:text-[20px] font-[400]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab harum
             cupiditate atque obcaecati ut. Est, voluptatibus nesciunt.
             Consectetur nesciunt voluptatum distinctio, molestias hic natus
             fugiat ipsa libero quos?
           </div>
-          <div className="flex my-2 space-x-12">
+          <div className="flex my-2 justify-center sm:justify-start space-x-12">
             <svg
               width="62"
               height="62"
