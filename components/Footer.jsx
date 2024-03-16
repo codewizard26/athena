@@ -10,8 +10,8 @@ function Footer() {
   ];
   return (
     <div>
-      <div className="flex flex-col mt-16">
-        <div className="text-gray-500">
+      <div className="sm:grid-cols-2 p-4 sm:p-0 bg-black rounded-lg flex flex-col my-0 md:my-40">
+        <div className="text-gray-500 md:mt-32 mt-2">
           &copy;2024 Athena. All Rights Reserved.
         </div>
         <div className="text-white">Legal Disclaimer</div>

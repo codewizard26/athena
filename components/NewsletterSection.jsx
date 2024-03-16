@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 export default function NewsletterSection() {
   return (
-    <div className=" text-white flex flex-wrap md:flex-nowrap py-12 px-6 md:px-12">
+    <div className=" sm:grid-cols-2 bg-black text-white flex flex-wrap md:flex-nowrap py-12 px-6 md:px-12 rounded-lg">
       <div className="flex-1">
         <h2 className="text-6xl gradient-text font-[550] mb-4">
           Amped up, Augmented and Awe-inspiring

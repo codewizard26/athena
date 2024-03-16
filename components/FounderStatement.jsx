@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 export default function FounderStatement() {
   return (
-    <div className=" text-white flex flex-wrap md:flex-nowrap md:mb-8 md:py-12  md:px-12">
+    <div className=" rounded-lg sm:grid-cols-2 bg-black text-white flex my-12 flex-wrap md:flex-nowrap md:mb-8 md:py-12  md:px-12 ">
       <div className="flex-1 hidden md:block">
         <Image
           src="window.svg"

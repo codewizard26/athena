@@ -20,10 +20,9 @@ export default function Home() {
         <OverlayNav setActiveSlide={setActiveSlide} />
 
         <svg
-          width="258"
-          height="39"
           viewBox="0 0 258 39"
           fill="none"
+          className="athena-logo w-20 h-20 sm:w-40 md:w-60 sm:h-14"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -31,7 +30,7 @@ export default function Home() {
             fill="white"
           />
         </svg>
-        <Button className="bg-transparent">Contact us</Button>
+        <Button className="bg-transparent hidden sm:block">Contact us</Button>
       </div>
       {/* <div
         className="sm:flex hidden justify-center  -mb-28 "

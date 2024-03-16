@@ -4,27 +4,27 @@ import { Button } from "./ui/button";
 
 function Collaborate() {
   return (
-    <div className="px-0 sm:px-3 md:px-4 lg:px-6 xl:px-16">
+    <div className=" bg-black rounded-lg  my-24 sm:px-3 md:px-4 lg:px-6 xl:px-16">
       <div className="flex flex-col items-center mt-16 ">
         <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl gradient-text font-semibold mt-12 md:mt-24 text-center">
           Interested in collaborating?
         </div>
-        <div className="text-lg md:text-xl heading-sub mt-8 text-center">
+        <div className="text-lg text-white md:text-xl heading-sub mt-8 text-center">
           Athena’s always looking for a way to make your life easier.
         </div>
-        <div className="text-sm md:text-md heading-sub mt-4 text-center">
+        <div className="text-sm text-white md:text-md heading-sub mt-4 text-center">
           Get in touch with us to discuss your project together!
         </div>
         <div className="flex flex-col md:flex-row justify-center w-full mt-10">
-          <div className="w-full md:flex-1 md:mt-10">
-            <div className="space-y-4">
+          <div className=" md:flex-1 md:mt-10">
+            <div className="space-y-4 p-8 sm:p-0 ">
               <Input type="text" placeholder="Name" />
               <Input type="email" placeholder="Email" />
               <Input type="text" placeholder="Tell us about it" />
-              <Button className="mt-12 w-full md:w-96">Send Message</Button>
+              <Button className="mt-14 w-32 justify-center md:w-96">Send Message</Button>
             </div>
           </div>
-          <div className="w-full md:flex-1 mt-10 md:mt-0">
+          <div className="w-full md:flex-1 mt-10 p-4 md:p-2 md:mt-0">
             <div className="flex flex-col md:flex-row">
               <div className="w-full md:w-56 m-4 md:m-12 ">
                 <div className="text-gray-400 mb-3">Opening Hours</div>
