@@ -46,7 +46,7 @@ function AboutSection({ isActive }) {
           />
         </div>
       </div> */}
-      <div className="grid sm:grid-cols-2 bg-black rounded-md items-center h-full w-full">
+      <div className="grid sm:grid-cols-2 mt-16 sm:mt-0 mb-16 bg-black rounded-md items-center h-full w-full">
         <motion.div
           className="moorti-container sm:order-first order-last"
           variants={imageVariants}
@@ -88,7 +88,8 @@ function AboutSection({ isActive }) {
               variants={svgVariants}
               style={svgStyle}
             >
-              <svg
+              <a href="" target="_blank">
+               <svg
                 width="62"
                 height="62"
                 viewBox="0 0 62 62"
@@ -101,12 +102,14 @@ function AboutSection({ isActive }) {
                   fill="black"
                 />
               </svg>
+              </a>
             </motion.div>
             <motion.div
               whileHover="hover"
               variants={svgVariants}
               style={svgStyle}
             >
+              <a href="" target="_blank">
               <svg
                 width="62"
                 height="62"
@@ -128,12 +131,14 @@ function AboutSection({ isActive }) {
                   fill="black"
                 />
               </svg>
+              </a>
             </motion.div>
             <motion.div
               whileHover="hover"
               variants={svgVariants}
               style={svgStyle}
             >
+              <a target="_blank" href="https://www.linkedin.com/company/athenaconsulting1/">
               <svg
                 width="62"
                 height="62"
@@ -155,6 +160,7 @@ function AboutSection({ isActive }) {
                   fill="black"
                 />
               </svg>
+              </a>
             </motion.div>
           </div>
         </motion.div>

@@ -22,7 +22,7 @@ function Footer() {
   const svgStyle = { cursor: "pointer" };
   return (
     <div>
-      <div className="sm:grid-cols-2 p-4 sm:p-0 bg-black rounded-lg flex flex-col my-0 md:my-40">
+      <div className="sm:grid-cols-2 p-4 sm:p-0 bg-black rounded-lg flex flex-col my-0 md:my-64">
         <div className="text-gray-500 md:mt-32 mt-2">
           &copy;2024 Athena. All Rights Reserved.
         </div>
@@ -63,6 +63,7 @@ function Footer() {
               variants={svgVariants}
               style={svgStyle}
             >
+              <a href="" target="_blank">
               <svg
                 width="42"
                 height="42"
@@ -76,12 +77,14 @@ function Footer() {
                   fill="black"
                 />
               </svg>
+              </a>
             </motion.div>
             <motion.div
               whileHover="hover"
               variants={svgVariants}
               style={svgStyle}
             >
+              <a href="" target="_blank"> 
               <svg
                 width="42"
                 height="42"
@@ -103,12 +106,14 @@ function Footer() {
                   fill="black"
                 />
               </svg>
+              </a>
             </motion.div>
             <motion.div
               whileHover="hover"
               variants={svgVariants}
               style={svgStyle}
             >
+              <a href="https://www.linkedin.com/company/athenaconsulting1/" target="_blank">
               <svg
                 width="42"
                 height="42"
@@ -130,6 +135,7 @@ function Footer() {
                   fill="black"
                 />
               </svg>
+              </a>
             </motion.div>
           </div>
         </div>

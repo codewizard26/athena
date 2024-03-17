@@ -23,7 +23,7 @@ function Home({ isActive }) {
   };
 
   return (
-    <div>
+    <div className="mb-16 sm:mb-0">
       <div
         className="flex sm:hidden justify-center -mb-16"
         style={{ zIndex: 1, position: "relative" }}
