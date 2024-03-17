@@ -1,10 +1,33 @@
 import Image from "next/image";
-import { Button } from "./ui/button";
+import { motion } from "framer-motion";
 
-export default function FounderStatement() {
+export default function FounderStatement({ isActive }) {
+  const imageVariants = {
+    hidden: { x: -100, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.8 },
+    },
+  };
+
+  const textVariants = {
+    hidden: { x: 100, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.8, delay: 0.2 },
+    },
+  };
+
   return (
-    <div className=" rounded-lg sm:grid-cols-2 bg-black text-white flex my-12 flex-wrap md:flex-nowrap md:mb-8 md:py-12  md:px-12 ">
-      <div className="flex-1 hidden md:block">
+    <div className="rounded-lg sm:grid-cols-2 bg-black text-white flex my-12 flex-wrap md:flex-nowrap md:mb-8 md:py-12 md:px-12">
+      <motion.div
+        className="flex-1 hidden md:block"
+        variants={imageVariants}
+        initial="hidden"
+        animate={isActive ? "visible" : "hidden"}
+      >
         <Image
           src="window.svg"
           alt="window"
@@ -12,13 +35,18 @@ export default function FounderStatement() {
           width="400"
           //   className="w-full h-full object-cover"
         />
-      </div>
+      </motion.div>
 
-      <div className="flex-1 m-8">
-        <div className="text-6xl gradient-text font-[550]  mt-4 mb-4">
+      <motion.div
+        className="flex-1 m-8"
+        variants={textVariants}
+        initial="hidden"
+        animate={isActive ? "visible" : "hidden"}
+      >
+        <div className="text-6xl gradient-text font-[550] mt-4 mb-4">
           Founder&apos;s Statement
         </div>
-        <div className="text-2xl mt-4 mb-2 ">
+        <div className="text-2xl mt-4 mb-2">
           Hear from Athena’s Founder and CEO
         </div>
         <div className="mb-8">
@@ -30,7 +58,7 @@ export default function FounderStatement() {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
