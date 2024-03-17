@@ -2,7 +2,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 
-export default function NewsletterSection({ isActive }) {
+export default function NewsletterSection({ isActive, isMobileView }) {
   const textVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -40,7 +40,7 @@ export default function NewsletterSection({ isActive }) {
         className="flex-1"
         variants={textVariants}
         initial="hidden"
-        animate={isActive ? "visible" : "hidden"}
+        animate={isMobileView || isActive ? "visible" : "hidden"}
       >
         <h2 className="text-6xl gradient-text font-[550] mb-4">
           Amped up, Augmented and Awe-inspiring
@@ -59,7 +59,7 @@ export default function NewsletterSection({ isActive }) {
         className="flex-1 hidden md:block"
         variants={imageVariants}
         initial="hidden"
-        animate={isActive ? "visible" : "hidden"}
+        animate={isMobileView || isActive ? "visible" : "hidden"}
       >
         <Image
           src="window.svg"

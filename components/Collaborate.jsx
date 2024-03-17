@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 
-function Collaborate({ isActive }) {
+function Collaborate({ isActive, isMobileView }) {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -28,7 +28,7 @@ function Collaborate({ isActive }) {
       className="bg-black rounded-lg my-20 sm:px-3 md:px-4 lg:px-6 xl:px-16"
       variants={containerVariants}
       initial="hidden"
-      animate={isActive ? "visible" : "hidden"}
+      animate={isMobileView || isActive ? "visible" : "hidden"}
     >
       <div className="flex flex-col items-center mt-16">
         <motion.div
@@ -55,14 +55,24 @@ function Collaborate({ isActive }) {
         >
           <motion.div className="md:flex-1 md:mt-10" variants={itemVariants}>
             <div className="space-y-4 p-8 sm:p-0">
-              <form action="https://formsubmit.co/195c98732621ce5c599562dc05479f79" method="POST" >
-              <input type="hidden" name="_captcha" value="false"></input>
-              <Input name="Name" type="text" placeholder="Name" />
-              <Input name= "Email" type="email" placeholder="Email" />
-              <Input name="Message" type="text" placeholder="Tell us about it" />
-              <Button type="submit" className="mt-14 w-32 justify-center md:w-96 mb-32">
-                Send Message
-              </Button>
+              <form
+                action="https://formsubmit.co/195c98732621ce5c599562dc05479f79"
+                method="POST"
+              >
+                <input type="hidden" name="_captcha" value="false"></input>
+                <Input name="Name" type="text" placeholder="Name" />
+                <Input name="Email" type="email" placeholder="Email" />
+                <Input
+                  name="Message"
+                  type="text"
+                  placeholder="Tell us about it"
+                />
+                <Button
+                  type="submit"
+                  className="mt-14 w-32 justify-center md:w-96 mb-32"
+                >
+                  Send Message
+                </Button>
               </form>
             </div>
           </motion.div>

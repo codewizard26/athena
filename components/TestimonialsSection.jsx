@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function TestimonialsSection({ isActive }) {
+export default function TestimonialsSection({ isActive, isMobileView }) {
   const testimonials = [
     { quote: "Best team I've worked with in a while.", author: "Client Name" },
     { quote: "They really know their stuff.", author: "Client Name" },
@@ -34,7 +34,7 @@ export default function TestimonialsSection({ isActive }) {
       className="bg-black rounded-md pt-1 pb-10"
       variants={containerVariants}
       initial="hidden"
-      animate={isActive ? "visible" : "hidden"}
+      animate={isMobileView || isActive ? "visible" : "hidden"}
       viewport={{ once: true, amount: 0.2 }}
     >
       <div className="text-center gradient-text mb-10 mt-16 text-5xl md:text-7xl sm:px-0 px-10 font-[550] ">

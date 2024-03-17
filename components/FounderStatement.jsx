@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function FounderStatement({ isActive }) {
+export default function FounderStatement({ isActive, isMobileView }) {
   const imageVariants = {
     hidden: { x: -100, opacity: 0 },
     visible: {
@@ -26,7 +26,7 @@ export default function FounderStatement({ isActive }) {
         className="flex-1 hidden md:block"
         variants={imageVariants}
         initial="hidden"
-        animate={isActive ? "visible" : "hidden"}
+        animate={isMobileView || isActive ? "visible" : "hidden"}
       >
         <Image
           src="window.svg"
@@ -41,7 +41,7 @@ export default function FounderStatement({ isActive }) {
         className="flex-1 m-8"
         variants={textVariants}
         initial="hidden"
-        animate={isActive ? "visible" : "hidden"}
+        animate={isMobileView || isActive ? "visible" : "hidden"}
       >
         <div className="text-6xl gradient-text font-[550] mt-4 mb-4">
           Founder&apos;s Statement

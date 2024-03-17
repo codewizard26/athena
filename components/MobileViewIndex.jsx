@@ -9,15 +9,17 @@ import Collaborate from "./Collaborate";
 import Footer from "./Footer";
 
 function MobileViewIndex() {
+  const isMobileView = true;
+
   return (
     <div className="sm:hidden block space-y-12 ">
-      <Home />
-      <AboutSection />
-      <ClientsSection />
-      <TestimonialsSection />
-      <NewsletterSection />
-      <FounderStatement />
-      <Collaborate />
+      <Home isActive={true} isMobileView={isMobileView} />
+      <AboutSection isActive={true} isMobileView={isMobileView} />
+      <ClientsSection isActive={true} isMobileView={isMobileView} />
+      <TestimonialsSection isActive={true} isMobileView={isMobileView} />
+      <NewsletterSection isActive={true} isMobileView={isMobileView} />
+      <FounderStatement isActive={true} isMobileView={isMobileView} />
+      <Collaborate isActive={true} isMobileView={isMobileView} />
       <Footer />
     </div>
   );

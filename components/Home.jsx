@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 
-function Home({ isActive }) {
+function Home({ isActive, isMobileView }) {
   const textVariant = {
     offscreen: { y: 50, opacity: 0 },
     onscreen: {
@@ -38,10 +38,10 @@ function Home({ isActive }) {
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.8 }}
-          animate={isActive ? "visible" : "hidden"}
+          animate={isMobileView || isActive ? "visible" : "hidden"}
         >
           <motion.div
-            animate={isActive ? "visible" : "hidden"}
+            animate={isMobileView || isActive ? "visible" : "hidden"}
             variants={textVariant}
             className="text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-[550] text-center sm:text-left"
           >
@@ -50,7 +50,7 @@ function Home({ isActive }) {
           </motion.div>
           <motion.div
             variants={buttonVariant}
-            animate={isActive ? "visible" : "hidden"}
+            animate={isMobileView || isActive ? "visible" : "hidden"}
             whileHover="hover"
             className="flex sm:justify-start justify-center"
           >
@@ -58,7 +58,7 @@ function Home({ isActive }) {
           </motion.div>
         </motion.div>
         <motion.div
-          animate={isActive ? "visible" : "hidden"}
+          animate={isMobileView || isActive ? "visible" : "hidden"}
           className="flex justify-center items-center"
           variants={imageVariant}
           initial="offscreen"
