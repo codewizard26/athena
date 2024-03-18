@@ -22,8 +22,8 @@ function Footer() {
   const svgStyle = { cursor: "pointer" };
   return (
     <div>
-      <div className="sm:grid-cols-2 p-4 lg:p-0 bg-black rounded-lg flex flex-col my-0 ">
-        <div className="text-gray-500 md:mt-32 mt-2">
+      <div className="sm:grid-cols-2 p-4 lg:p-4 bg-black rounded-lg flex flex-col my-0 ">
+        <div className="text-gray-500 md:mt-16 mt-4">
           &copy;2024 Athena. All Rights Reserved.
         </div>
         <div className="text-white">Legal Disclaimer</div>

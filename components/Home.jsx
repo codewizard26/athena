@@ -43,7 +43,7 @@ function Home({ isActive, isMobileView }) {
           <motion.div
             animate={isMobileView || isActive ? "visible" : "hidden"}
             variants={textVariant}
-            className="text-3xl mt-20 sm:mt-0 md:text-4xl lg:text-6xl xl:text-7xl font-[550] text-center sm:text-left gradient-text"
+            className="text-3xl mt-20 sm:mt-20 md:text-4xl lg:text-6xl xl:text-7xl font-[550] text-center sm:text-left gradient-text"
           >
             <div>Where Ideas</div>
             <div>Become Reality</div>

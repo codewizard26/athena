@@ -65,6 +65,7 @@ function Collaborate({ isActive, isMobileView }) {
                   name="_captcha"
                   value="false"
                 ></input>
+                <input type="hidden" name="_next" value="https://athenaconsulting.vercel.app/"></input>
                 <Input name="Name" type="text" placeholder="Name" />
                 <Input name="Email" type="email" placeholder="Email" />
                 <Input
@@ -74,7 +75,7 @@ function Collaborate({ isActive, isMobileView }) {
                 />
                 <Button
                   type="submit"
-                  className="mt-14 w-32 justify-center md:w-96 "
+                  className="mt-14 mb-4 w-32 justify-center md:w-96 "
                 >
                   Send Message
                 </Button>
