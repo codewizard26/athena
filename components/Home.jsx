@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 
-function Home({ isActive }) {
+function Home({ isActive, isMobileView }) {
   const textVariant = {
     offscreen: { y: 50, opacity: 0 },
     onscreen: {
@@ -23,55 +23,49 @@ function Home({ isActive }) {
   };
 
   return (
-    <div className="mb-16 sm:mb-0">
+    <div className="mb-16 sm:mb-0 relative">
       <div
-        className="flex sm:hidden justify-center -mb-16"
-        style={{ zIndex: 1, position: "relative" }}
+        className="flex lg:hidden justify-center -mb-16"
+        style={{ zIndex: 1 }}
       >
         <div className="border-black border-[16px] rounded-full">
-          <img src="/moon.png" className="w-24" />
+          <img src="/moon.png" className="w-24" alt="moon" />
         </div>
       </div>
-      <div className="grid bg-black sm:h-auto rounded-md h-screen sm:grid-cols-2">
+      <div className="sm:flex h-auto space-y-4 sm:space-y-0 bg-black rounded-md">
         <motion.div
-          className="h-full space-y-6 w-full flex flex-col justify-center px-4"
+          className="h-full space-y-6 w-full flex flex-col  justify-center px-4"
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.8 }}
-          animate={isActive ? "visible" : "hidden"}
+          animate={isMobileView || isActive ? "visible" : "hidden"}
         >
           <motion.div
-            animate={isActive ? "visible" : "hidden"}
+            animate={isMobileView || isActive ? "visible" : "hidden"}
             variants={textVariant}
-            className="text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-[550] text-center sm:text-left"
+            className="text-3xl mt-20 sm:mt-20 md:text-4xl lg:text-6xl xl:text-7xl font-[550] text-center sm:text-left gradient-text"
           >
-            <div className="gradient-text">Where Ideas</div>
-            <div className="gradient-text">Become Reality</div>
+            <div>Where Ideas</div>
+            <div>Become Reality</div>
           </motion.div>
           <motion.div
             variants={buttonVariant}
-            animate={isActive ? "visible" : "hidden"}
+            animate={isMobileView || isActive ? "visible" : "hidden"}
             whileHover="hover"
-            className="flex sm:justify-start justify-center"
+            className="flex sm:justify-start justify-center w-full"
           >
             <Button className="mt-4 sm:mt-0">Free Consultation</Button>
           </motion.div>
         </motion.div>
         <motion.div
-          animate={isActive ? "visible" : "hidden"}
-          className="flex justify-center items-center"
+          animate={isMobileView || isActive ? "visible" : "hidden"}
+          className="flex w-full justify-center items-center"
           variants={imageVariant}
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: true }}
         >
-          <Image
-            height="500"
-            width="500"
-            className="moorti-1"
-            src="/moorti.svg"
-            alt="moorti"
-          />
+          <Image height="500" width="500" src="/moorti.svg" alt="moorti" />
         </motion.div>
       </div>
     </div>

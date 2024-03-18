@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function FounderStatement({ isActive }) {
+export default function FounderStatement({ isActive, isMobileView }) {
   const imageVariants = {
     hidden: { x: -100, opacity: 0 },
     visible: {
@@ -21,35 +21,29 @@ export default function FounderStatement({ isActive }) {
   };
 
   return (
-    <div className="rounded-lg sm:grid-cols-2 bg-black text-white flex my-12 flex-wrap md:flex-nowrap md:mb-8 md:py-12 md:px-12">
+    <div className="rounded-lg  flex flex-wrap space-x-0 sm:space-x-12  justify-between w-full bg-black text-white my-6 px-4 py-8 md:flex-nowrap md:mb-8 md:px-12 md:py-12 lg:px-16 lg:py-16">
       <motion.div
-        className="flex-1 hidden md:block"
+        className="flex w-full md:w-1/3 justify-center items-center  lg:w-auto lg:block"
         variants={imageVariants}
         initial="hidden"
-        animate={isActive ? "visible" : "hidden"}
+        animate={isMobileView || isActive ? "visible" : "hidden"}
       >
-        <Image
-          src="window.svg"
-          alt="window"
-          height="400"
-          width="400"
-          //   className="w-full h-full object-cover"
-        />
+        <Image src="/window.svg" alt="window" height="300" width="300" />
       </motion.div>
 
       <motion.div
-        className="flex-1 m-8"
+        className="flex w-full  flex-col  sm:justify-between justify-center sm:items-start items-center mt-6 lg:mt-0"
         variants={textVariants}
         initial="hidden"
-        animate={isActive ? "visible" : "hidden"}
+        animate={isMobileView || isActive ? "visible" : "hidden"}
       >
-        <div className="text-6xl gradient-text font-[550] mt-4 mb-4">
-          Founder&apos;s Statement
+        <div className="text-4xl md:text-5xl text-center  sm:text-start lg:text-6xl gradient-text font-semibold">
+          Founder &apos;s Statement
         </div>
-        <div className="text-2xl mt-4 mb-2">
+        <div className="text-lg md:text-xl lg:text-2xl mt-4 mb-2">
           Hear from Athena’s Founder and CEO
         </div>
-        <div className="mb-8">
+        <div className="text-sm md:text-base lg:text-lg ">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function ClientsSection({ isActive }) {
+export default function ClientsSection({ isActive, isMobileView }) {
   const clients = [
     { name: "ATOM Accelerator", logo: "/path-to-logo/atom.png" },
     { name: "DIFINITY", logo: "/path-to-logo/seraphim.png" },
@@ -33,7 +33,7 @@ export default function ClientsSection({ isActive }) {
       <motion.div
         className="flex justify-center items-center flex-wrap gap-4 sm:gap-8"
         initial="hidden"
-        animate={isActive ? "visible" : "hidden"}
+        animate={isMobileView || isActive ? "visible" : "hidden"}
         variants={{
           visible: {
             transition: {

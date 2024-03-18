@@ -1,22 +1,28 @@
-import Image from "next/image";
 import React from "react";
-import { Inter } from "next/font/google";
 import SwiperComponent from "@/components/Swiper";
 import OverlayNav from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import MobileViewIndex from "@/components/MobileViewIndex";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [activeSlide, setActiveSlide] = React.useState(0);
 
   return (
     <main
-      className="container"
+      className="mx-3 sm:container"
       // className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
     >
-      <div className="justify-between items-center flex mb-6 mt-12">
+      {/* make this div fixed */}
+      <div
+        className="justify-between items-center  flex mx-3"
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 10,
+        }}
+      >
         <OverlayNav setActiveSlide={setActiveSlide} />
 
         <svg
@@ -30,7 +36,7 @@ export default function Home() {
             fill="white"
           />
         </svg>
-        <Button className="bg-transparent hidden sm:block">Contact us</Button>
+        <Button className="bg-transparent ">Contact us</Button>
       </div>
       {/* <div
         className="sm:flex hidden justify-center  -mb-28 "
@@ -43,14 +49,15 @@ export default function Home() {
           <img src="/moon.png" className="w-24" />
         </div>
       </div> */}
-
       <div
-        className=" sm:block hidden "
+        className=" xl:block hidden mt-28 "
         style={{ zIndex: 0, position: "relative" }}
       >
         <SwiperComponent activeSlide={activeSlide} />
       </div>
-      <MobileViewIndex />
+      <div className="xl:mt-0 mt-20">
+        <MobileViewIndex />
+      </div>
     </main>
   );
 }
