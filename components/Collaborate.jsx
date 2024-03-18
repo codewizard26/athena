@@ -32,7 +32,7 @@ function Collaborate({ isActive, isMobileView }) {
     >
       <div className="flex flex-col items-center ">
         <motion.div
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl gradient-text font-semibold mt-12 md:mt-24 text-center"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl gradient-text font-semibold mt-12 md:mt-12 md:mb-4 text-center"
           variants={itemVariants}
         >
           Interested in collaborating?
@@ -66,16 +66,17 @@ function Collaborate({ isActive, isMobileView }) {
                   value="false"
                 ></input>
                 <input type="hidden" name="_next" value="https://athenaconsulting.vercel.app/"></input>
-                <Input name="Name" type="text" placeholder="Name" />
-                <Input name="Email" type="email" placeholder="Email" />
+                <Input name="Name" type="text" placeholder="Name" required />
+                <Input name="Email" type="email" placeholder="Email" required />
                 <Input
                   name="Message"
                   type="text"
                   placeholder="Tell us about it"
+                  required
                 />
                 <Button
                   type="submit"
-                  className="mt-14 mb-4 w-32 justify-center md:w-96 "
+                  className="mt-8 mb-4 w-32 justify-center md:w-96 "
                 >
                   Send Message
                 </Button>
