@@ -12,7 +12,7 @@ function MobileViewIndex() {
   const isMobileView = true;
 
   return (
-    <div className="sm:hidden block space-y-12 ">
+    <div className="xl:hidden block space-y-12 ">
       <Home isActive={true} isMobileView={isMobileView} />
       <AboutSection isActive={true} isMobileView={isMobileView} />
       <ClientsSection isActive={true} isMobileView={isMobileView} />

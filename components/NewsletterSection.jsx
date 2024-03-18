@@ -42,11 +42,11 @@ export default function NewsletterSection({ isActive, isMobileView }) {
         initial="hidden"
         animate={isMobileView || isActive ? "visible" : "hidden"}
       >
-        <h2 className="text-6xl gradient-text font-[550] mb-4">
+        <h2 className="text-5xl gradient-text font-[550] mb-4">
           Amped up, Augmented and Awe-inspiring
         </h2>
         <p className="text-xl mb-4">
-          Athena &apos; s Regularly Updated Newsletter
+          Athena&apos;s Regularly Updated Newsletter
         </p>
         <p className="mb-8">
           Keep up with us and our interesting bits via our newsletter.
@@ -56,7 +56,7 @@ export default function NewsletterSection({ isActive, isMobileView }) {
         </motion.div>
       </motion.div>
       <motion.div
-        className="flex-1 hidden md:block"
+        className=" hidden md:block justify-center items-center sm:flex"
         variants={imageVariants}
         initial="hidden"
         animate={isMobileView || isActive ? "visible" : "hidden"}
@@ -64,8 +64,8 @@ export default function NewsletterSection({ isActive, isMobileView }) {
         <Image
           src="window.svg"
           alt="window"
-          height="400"
-          width="400"
+          height="300"
+          width="300"
           //   className="w-full h-full object-cover"
         />
       </motion.div>

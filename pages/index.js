@@ -13,7 +13,16 @@ export default function Home() {
       // className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
     >
       {/* make this div fixed */}
-      <div className="justify-between items-center  flex mb-6 mt-12">
+      <div
+        className="justify-between items-center  flex mx-3"
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 10,
+        }}
+      >
         <OverlayNav setActiveSlide={setActiveSlide} />
 
         <svg
@@ -41,12 +50,14 @@ export default function Home() {
         </div>
       </div> */}
       <div
-        className=" sm:block hidden "
+        className=" xl:block hidden mt-28 "
         style={{ zIndex: 0, position: "relative" }}
       >
         <SwiperComponent activeSlide={activeSlide} />
       </div>
-      <MobileViewIndex />
+      <div className="xl:mt-0 mt-20">
+        <MobileViewIndex />
+      </div>
     </main>
   );
 }
